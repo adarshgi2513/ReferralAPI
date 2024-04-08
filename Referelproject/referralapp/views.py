@@ -16,6 +16,7 @@ from rest_framework.authtoken.models import Token
 #this is the user registration API
 #User Registration Endpoint:
 class UserRegistration(APIView):
+    permission_classes=[AllowAny]
     def post(self, request):
         serializer = UserSerializer(data=request.data)
         if serializer.is_valid():
