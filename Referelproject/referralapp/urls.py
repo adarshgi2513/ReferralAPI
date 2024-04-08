@@ -1,9 +1,9 @@
 from django.urls import path
-from.views import UserRegistration,LoginAPI,UserDetails,ReferralUserSerializer
+from.views import UserRegistration,LoginAPI,UserDetails,ReferralsEndpoint
 urlpatterns = [
     path('register/', UserRegistration.as_view(), name='user-registration'),
      path('login/', LoginAPI.as_view(), name='user-login'),
       path('userdetails/', UserDetails.as_view(), name='user-details'),
-    path('referalusers/', ReferralUserSerializer.as_view(), name='user-refererals'),
+    path('referalusers/', ReferralsEndpoint.as_view(), name='user-refererals'),
 
 ]
